@@ -2,6 +2,7 @@
  * Created by Admin on 2017-08-17.
  */
 public class ManaPotion {
+
     private String name;
     private int mana;
 

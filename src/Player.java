@@ -17,7 +17,7 @@ public class  Player {
     private List<Spell> spellList;
 
 
-    public Player(String nick, int hp, int attack, int deff, int power, int mana, int experience, int proffesion, int lvl, int experienceToLvl, List spellList) {
+    public Player(String nick, int hp, int attack, int deff, int power, int mana, int experience, int proffesion, int lvl, int experienceToLvl) {
         this.nick = nick;
         this.hp = hp;
         this.attack = attack;
@@ -28,7 +28,6 @@ public class  Player {
         this.proffesion = proffesion;
         this.lvl = lvl;
         this.experienceToLvl = experienceToLvl;
-        this.spellList = spellList;
     }
 
 
