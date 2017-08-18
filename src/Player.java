@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * Created by Admin on 2017-08-17.
  */
@@ -12,8 +14,10 @@ public class  Player {
     private int proffesion;
     private int lvl;
     private int experienceToLvl;
+    private List<Spell> spellList;
 
-    public Player(String nick, int hp, int attack, int deff, int power, int mana, int experience, int proffesion, int lvl, int experienceToLvl) {
+
+    public Player(String nick, int hp, int attack, int deff, int power, int mana, int experience, int proffesion, int lvl, int experienceToLvl, List spellList) {
         this.nick = nick;
         this.hp = hp;
         this.attack = attack;
@@ -24,9 +28,18 @@ public class  Player {
         this.proffesion = proffesion;
         this.lvl = lvl;
         this.experienceToLvl = experienceToLvl;
+        this.spellList = spellList;
     }
 
 
+
+    public void addSpell(Spell spell){
+        spellList.add(spell);
+    }
+
+    public List<Spell> getPlayerSpells() {
+        return spellList;
+    }
     //getey i setery
     public String getNick() {
         return nick;
@@ -121,8 +134,6 @@ public class  Player {
                 '}';
     }
 
-
-
     public void addExperience (int experience) {
         this.experience += experience;
         checkIfLvLUp();
@@ -135,6 +146,14 @@ public class  Player {
             this.experienceToLvl = this.experienceToLvl + 100 * lvl;
             System.out.println(" ! level UP ! ");
         }
+    }
+
+    public void damagePlayer() {
+        this.hp -= hp;
+    }
+
+    public void addPlayerHp() {
+        this.hp += hp;
     }
 
 }
